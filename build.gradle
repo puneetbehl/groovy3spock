@@ -1,0 +1,23 @@
+plugins {
+    id "groovy"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.jfrog.org/oss-snapshot-local/" }
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.2-SNAPSHOT'
+    testImplementation('org.spockframework:spock-core:2.0-M2-groovy-3.0') {
+        exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+//compileTestGroovy.groovyOptions.forkOptions.jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
