@@ -1,4 +1,5 @@
 plugins {
+    id "base"
     id "groovy"
 }
 
@@ -8,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.codehaus.groovy:groovy-all:3.0.2-SNAPSHOT'
+    implementation 'org.codehaus.groovy:groovy:3.0.2-SNAPSHOT'
     testImplementation('org.spockframework:spock-core:2.0-M2-groovy-3.0') {
         exclude group: 'org.codehaus.groovy', module: 'groovy-all'
         exclude group: 'org.hamcrest', module: 'hamcrest-core'
