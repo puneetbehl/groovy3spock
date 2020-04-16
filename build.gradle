@@ -10,7 +10,8 @@ repositories {
 
 dependencies {
     implementation 'org.codehaus.groovy:groovy:3.0.3'
-    implementation 'org.codehaus.groovy:groovy-test:3.0.3'
+    testImplementation 'org.codehaus.groovy:groovy-test-junit5:3.0.3'
+    testImplementation 'org.codehaus.groovy:groovy-test:3.0.3'
     testImplementation('org.spockframework:spock-core:2.0-M2-groovy-3.0') {
         exclude group: 'org.codehaus.groovy', module: 'groovy-all'
         exclude group: 'org.hamcrest', module: 'hamcrest-core'
